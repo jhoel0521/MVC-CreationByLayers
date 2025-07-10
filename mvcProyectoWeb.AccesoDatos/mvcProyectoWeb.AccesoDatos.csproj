@@ -16,4 +16,9 @@
     <PackageReference Include="Microsoft.SqlServer.Server" Version="1.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\mvcProyectoWeb.Models\mvcProyectoWeb.Models.csproj" />
+    <ProjectReference Include="..\mvcProyectoWeb.Utilidades\mvcProyectoWeb.Utilidades.csproj" />
+  </ItemGroup>
+
 </Project>
