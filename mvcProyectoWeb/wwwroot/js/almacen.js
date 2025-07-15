@@ -14,16 +14,22 @@ function cargarDatatable() {
         },
         "columns": [
             { "data": "id", "width": "5%" },
+            {
+                "data": "urlImagen",
+                "render": function (data, type, row) {
+                    return `<img src="${data}" alt="Almacén ${row.nombreAlmacen}" width="100" class="img-thumbnail" />`;
+                },
+                "width": "20%"
+            },
             { "data": "nombreAlmacen", "width": "40%" },
             { "data": "direccion", "width": "10%" },
             {
                 "data": "id",
                 "render": function (data) {
-                    return `<div class="text-center">
+                    return `<div class="btn-group">
                         <a href="/Admin/Almacenes/Edit/${data}" class="btn btn-success text-white" style="cursor:pointer; width:140px;">
                         <i class="far fa-edit"></i> Editar
                         </a>
-                        &nbsp;
                         <a onclick=Delete("/Admin/Almacenes/Delete/${data}") class="btn btn-danger text-white" style="cursor:pointer; width:140px;">
                         <i class="far fa-trash-alt"></i> Borrar
                         </a>
