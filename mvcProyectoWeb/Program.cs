@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using mvcProyectoWeb.AccesoDatos;
+using mvcProyectoWeb.AccesoDatos.Data.Repository.IRepository;
+using mvcProyectoWeb.AccesoDatos.Data.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
@@ -10,7 +12,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddScoped<IContenedorTrabajo, ContenedorTrabajo>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
