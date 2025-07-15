@@ -15,9 +15,11 @@ namespace mvcProyectoWeb.AccesoDatos.Data.Repository
             _context = context;
             //se agregan cada uno de los repositorios para que queden encapsulados
             Almacen = new AlmacenRepository(_context);
+            Producto = new ProductoRepository(_context);
         }
 
         public IAlmacenRepository Almacen { get; private set; }
+        public IProductoRepository Producto { get; private set; }
 
         public void Dispose()
         {

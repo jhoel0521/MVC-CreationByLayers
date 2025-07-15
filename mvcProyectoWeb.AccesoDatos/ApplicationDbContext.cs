@@ -13,6 +13,8 @@ namespace mvcProyectoWeb.AccesoDatos
 
         //Poner aquí todos los modelos que se vayan creando
         public DbSet<Almacen> Almacen { get; set; }
+        public DbSet<Producto> Producto { get; set; }
+
     }
 
 }

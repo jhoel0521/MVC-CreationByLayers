@@ -51,10 +51,20 @@
                         <!-- Dropdown con links externos -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Almacen
+                                Almacenes
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" asp-area="Admin" asp-controller="Almacenes" asp-action="Index">Index</a></li>
+                                <li><a class="dropdown-item" asp-area="Admin" asp-controller="Almacenes" asp-action="Index">Almacenes</a></li>
+                                <li><a class="dropdown-item" asp-area="Admin" asp-controller="Almacenes" asp-action="Create">Crear Almacen</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Productos
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" asp-area="Admin" asp-controller="Productos" asp-action="Index">Productos</a></li>
+                                <li><a class="dropdown-item" asp-area="Admin" asp-controller="Productos" asp-action="Create">Crear Producto</a></li>
                             </ul>
                         </li>
                     </ul>

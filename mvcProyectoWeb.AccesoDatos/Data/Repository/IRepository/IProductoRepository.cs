@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using mvcProyectoWeb.Models;
 
 namespace mvcProyectoWeb.AccesoDatos.Data.Repository.IRepository
 {
-    public interface IContenedorTrabajo : IDisposable
+    public interface IProductoRepository : IRepository<Producto>
     {
-        IAlmacenRepository Almacen { get; }
-        IProductoRepository Producto { get; }
-        void Save();
+        void Update(Producto producto);
     }
 
 }

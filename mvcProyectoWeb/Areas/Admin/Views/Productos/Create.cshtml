@@ -1,0 +1,89 @@
+﻿@model mvcProyectoWeb.Models.Producto
+@{
+    ViewData["Title"] = "Crear producto";
+}
+<h3 class="text-center">Crear un nuevo producto</h3>
+
+<form method="POST" asp-action="Create">
+    <div class="row px-2 offset-1 border">
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <div class="col-10 offset-1 mt-4">
+
+            <div class="form-group row">
+                <label asp-for="Nombre" class="col-4 col-form-label"></label>
+                <div class="col-8">
+                    <input asp-for="Nombre" class="form-control" placeholder="Ingrese el nombre" />
+                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                </div>
+            </div>
+
+            <br />
+
+            <div class="form-group row">
+                <label asp-for="Descripcion" class="col-4 col-form-label"></label>
+                <div class="col-8">
+                    <textarea asp-for="Descripcion" class="form-control" rows="3" placeholder="Ingrese la descripción"></textarea>
+                    <span asp-validation-for="Descripcion" class="text-danger"></span>
+                </div>
+            </div>
+
+            <br />
+
+            <div class="form-group row">
+                <label asp-for="Precio" class="col-4 col-form-label"></label>
+                <div class="col-8">
+                    <input asp-for="Precio" class="form-control" placeholder="Ingrese el precio" />
+                    <span asp-validation-for="Precio" class="text-danger"></span>
+                </div>
+            </div>
+
+            <br />
+
+            <div class="form-group row">
+                <label asp-for="Stock" class="col-4 col-form-label"></label>
+                <div class="col-8">
+                    <input asp-for="Stock" class="form-control" placeholder="Ingrese el stock disponible" />
+                    <span asp-validation-for="Stock" class="text-danger"></span>
+                </div>
+            </div>
+
+            <br />
+
+            <div class="form-group row">
+                <label asp-for="UrlImagen" class="col-4 col-form-label"></label>
+                <div class="col-8">
+                    <input asp-for="UrlImagen" class="form-control" placeholder="URL de la imagen" />
+                    <span asp-validation-for="UrlImagen" class="text-danger"></span>
+                </div>
+            </div>
+
+            <br />
+
+            <div class="form-group row">
+                <label asp-for="AlmacenId" class="col-4 col-form-label"></label>
+                <div class="col-8">
+                    <select asp-for="AlmacenId" asp-items="ViewBag.Almacenes" class="form-control">
+                        <option value="">-- Seleccione un almacén --</option>
+                    </select>
+                    <span asp-validation-for="AlmacenId" class="text-danger"></span>
+                </div>
+            </div>
+
+            <br />
+
+            <div class="form-group row">
+                <div class="col-8 offset-4">
+                    <button type="submit" class="btn btn-primary form-control">
+                        <i class="fa fa-plus"></i> Crear
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
