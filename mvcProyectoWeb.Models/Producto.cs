@@ -32,6 +32,6 @@ namespace mvcProyectoWeb.Models
         public int AlmacenId { get; set; }
 
         [ForeignKey("AlmacenId")]
-        public Almacen Almacen { get; set; }
+        public Almacen? Almacen { get; set; }
     }
 }
